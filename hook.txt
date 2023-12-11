@@ -1,0 +1,74 @@
+
+code:
+<!DOCTYPE html> 
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<style>
+p {outline-color:red;}
+p.double {outline-style: double;}
+body {
+  font-family: "Sofia", sans-serif;
+  background-color:lightblue;
+}
+<img src="‪c:\users\gptcs\desktop\img.jpg" alt="img" width="300" height="300">‬
+</style>
+<center>
+<title> Registration Form</title>
+<script>
+function passvalues()
+{
+var name = document.getElementById("name:").value;
+var email = document.getElementById("email:").value;
+var address = document.getElementById("address:").value;
+localStorage.setItem("name:",name);
+localStorage.setItem("email:",email);
+localStorage.setItem("address:",address);
+return;
+ }
+</script>
+</head>
+ <body>
+ <h2=>Registrtion Form</h2>
+ <form action="Details.html">
+<fieldset>
+ <legend>Registration</legend>
+<label> Name </label>
+ <input type="text" id="name"/><br><br> 
+<label> Email ID </label>
+ <input type="email" id="email"/><br><br>
+<label> Address </label>
+ <input type="address" id="address"/><br><br>
+<input type="submit" value="submit" onclick="passvalues()"/>
+ </fieldset> 
+ </form>
+</center>
+ </body>
+</html>
+ 
+
+Step3:  write a code for details collector 
+Save the code in the new folder
+    by the name of details.html
+
+ 
+Code:
+<html>
+Full Stack Development (20CS52I)
+ Details.html
+<html>
+ <head>
+ <title> Details</title>
+ </head>
+ <body>
+<form>
+ Your Name is:<p id="name"></p><br>
+ Your email is:<p id="email"></p><br>
+ Your address is:<p id="address"></p> 
+<script>
+ document.getElementById("name").innerHTML = localStorage.getItem("name");
+ document.getElementById("email").innerHTML = localStorage.getItem("email");
+ document.getElementById("address").innerHTML = localStorage.getItem("address");
+ </script>
+</form>
+ </body
+</html>
